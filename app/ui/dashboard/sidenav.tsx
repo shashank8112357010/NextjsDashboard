@@ -1,9 +1,21 @@
+
+"use client"
+import { useEffect } from 'react';
 import Link from 'next/link';
 import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/acme-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
+import { usePathname } from "next/navigation"
 
 export default function SideNav() {
+  const pathname = usePathname()
+
+
+useEffect(()=>{
+console.log(pathname);
+
+},[])
+
   return (
     <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <Link
